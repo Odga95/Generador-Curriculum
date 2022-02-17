@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="js/app.js">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="">NOSOTROS</a>
+                <a href="">CODIGO</a>
+                <a href="">ENTRAR</a>
+                <a href="">REGISTRARSE</a>
+            </li>
+
+    </nav>
+
+    <header>
+        <div class="fondo">
+            <ul class="slider">
+                <li>
+                    <input type="radio" id="sbutton1" name="sradio" checked>
+                    <label for="sbutton1"></label>
+                    <img src="img/CV1.jpg" alt="">
+                </li>
+                <li>
+                    <input type="radio" id="sbutton2" name="sradio">
+                    <label for="sbutton2"></label>
+                    <img src="img/CV2.jpg" alt="">
+                </li>
+                <li>
+                    <input type="radio" id="sbutton3" name="sradio">
+                    <label for="sbutton3"></label>
+                    <img src="img/CV3.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container mt-5 p-6">
+            <div id="contenido" class="row">
+                <legend class="text-center mb-4">Datos personales</legend>
+                <div class="col-lg-12">
+                    <form id="nuevo-formulario">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- NOMBRE -->
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Nombre completo:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="text" id="nombre" name="nombre" class="form-control"
+                                            placeholder="Pepito Perez">
+                                    </div>
+                                </div>
+
+                                <!-- CONTACTO -->
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Email:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="email" id="email" name="email" class="form-control"
+                                            placeholder="ejemplo@ejemplo.com">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">LinkedIn:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="url" id="linkedin" name="linkedin" class="form-control"
+                                            placeholder="www.linkedin.com/in/ejemplo">
+                                    </div>
+                                </div>
+
+                                <!-- EDAD -->
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Edad:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="age" id="edad" name="edad" class="form-control"
+                                            placeholder="18 años">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- TELEFONO -->
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Telefono:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="age" id="tel" name="telefono" class="form-control"
+                                            placeholder="1234567890">
+                                    </div>
+                                </div>
+                                <!-- DIRECCIÓN DE RESIDENCIA-->
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-lg-2 col-form-label">Pais:</label>
+                                    <div class="col-sm-4 col-lg-4">
+                                        <input type="text" id="pais" name="pais" class="form-control"
+                                            placeholder="Colimbia">
+                                    </div>
+                                    <label class="col-sm-2 col-lg-2 col-form-label">Ciudad:</label>
+                                    <div class="col-sm-4 col-lg-4">
+                                        <input type="text" id="ciudad" name="ciudad" class="form-control"
+                                            placeholder="Cali">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Barrio:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="text" id="barrio" name="barrio" class="form-control"
+                                            placeholder="barrio ejemplo">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-lg-4 col-form-label">Direccion:</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input type="text" id="direccion" name="direccion" class="form-control"
+                                            placeholder="calle 1 # 2-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr size="5px" color="#FF851B" />
+
+                        <!-- PERFIL PROFESIONAL -->
+                        <div class="row mt-5">
+                            <legend class="mb-4 text-center">perfil profesional</legend>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">SOY:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <textarea class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="Breve texto que describa que sabes, que haces… quien eres, que sabes hacer."
+                                            maxlength="300    "></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">CON HABILIDADES
+                                        EN:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <textarea class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="Breve texto que describa que sabes, que haces… quien eres, que sabes hacer."></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">CON CONOCIMIENTOS
+                                        EN:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <textarea class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="Breve texto que describa que sabes, que haces… quien eres, que sabes hacer."></textarea>
+                                    </div>
+                                </div>
+
+                                <hr size="5px" color="#FF851B" />
+                            </div>
+                        </div>
+
+                        <!-- INTERESES -->
+                        <div class="row mt-3">
+                            <legend class="mb-5 text-center">mis intereses</legend>
+                            <div class="col-md-6">
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Me gusta:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="Viajar" maxlength="15       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row centrado">
+                                    <button type="button" id="btnintereses"
+                                        class="btn btn-warning center-block ">Agregar</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="intereses centrado">
+                                    <a href="">hola</a>
+                                    <a href="">como</a>
+                                    <a href="">estas</a>
+                                    <a href="">bien</a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr size="5px" color="#FF851B" />
+
+                        <!-- FORMACIÓN -->
+
+                        <div class="row mt-5">
+                            <legend class="mb-5 text-center">Educacion</legend>
+                            <div class="col-md-6">
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Institución:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="3"
+                                            placeholder="Harvard University" maxlength="15"></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Título:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="3"
+                                            placeholder="Bachiller técnico industrial" maxlength="50"></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Periodo:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="3"
+                                            placeholder="Enero 2017 - Diciembre 2022" maxlength="15       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row centrado">
+                                    <button type="button" id="btneducacion"
+                                        class="btn btn-warning center-block    ">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="centrado">
+                                    <ul id="formacion" class="list-group">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr size="5px" color="#FF851B" />
+
+                        <!-- OTROS ESTUDIOS -->
+                        <div class="row mt-5">
+                            <legend class="mb-5 text-center">Educacion complementaria</legend>
+                            <div class="col-md-6">
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Institución:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="Udemy - Curso Virtual " maxlength="15       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Título:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="Diseño de interiores" maxlength="15       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Duración:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="80 horas" maxlength="15       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row centrado">
+                                    <button type="button" id="btneducacionc"
+                                        class="btn btn-warning center-block    ">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="centrado">
+                                    <ul id="educacioncomplementaria" class="list-group">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr size="5px" color="#FF851B" />
+
+                        <!-- IDIOMAS -->
+                        <div class="row mt-5">
+                            <legend class="mb-5 text-center">Idiomas</legend>
+                            <div class="col-md-6">
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">lenguaje:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="Francés " maxlength="20       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Nivel:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="perfil" id="perfil" rows="5"
+                                            placeholder="En escala del 1 al 100 califica tu conocimiento"
+                                            maxlength="20"></input>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row centrado">
+                                    <button type="button" id="btnidioma"
+                                        class="btn btn-warning center-block    ">Agregar</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="centrado">
+                                    <ul id="habilidades" class="list-group">
+                                        <li>
+                                            <p>Español</p>
+                                            <a style="width:100%;">
+                                                <p>100%</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a style="width:54%;">
+                                                <p>Ingles</p>
+                                                <p>54%</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr size="5px" color="#FF851B" />
+
+                        <!-- EXPERIENCIA LABORAL-->
+
+
+                        <div class="row mt-5">
+                            <legend class="mb-5 text-center">Experiencia laboral</legend>
+                            <div class="col-md-6">
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Nombre de
+                                        Empresa</label>
+                                    <div class="col-sm-7 col-lg-7">
+                                        <input class="form-control" name="empresa" id="empresa" rows="5"
+                                            placeholder="Mecanicos SAS" maxlength="40       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Cargo:</label>
+                                    <div class="col-sm-7 col-lg-7">
+                                        <input class="form-control" name="cargo" id="cargo" rows="5"
+                                            placeholder="Mecanico auxiliar" maxlength="40       "></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Periodo:</label>
+                                    <div class="col-sm-7 col-lg-7">
+                                        <input class="form-control" name="perfil" id="Duración" rows="5"
+                                            placeholder="Enero 2017 - Actualidad" maxlength="40"></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center ">funciones:</label>
+                                    <div class="col-sm-7 col-lg-7">
+                                        <textarea class="form-control" name="funciones" id="funciones" rows="3"
+                                            placeholder="Encargado de brindar asistencia mecanica de maquinas industriales"
+                                            maxlength="150"></textarea>
+                                    </div>
+                                    <button type="button" id="sbtnexperiencia"
+                                        class="btn btn-warning center-block col-sm-2 col-lg-2">Agregar Funcion</button>
+                                </div>
+
+                                <div class="form-group row">
+                                    <legend class="col-sm-12 col-lg-12 col-form-label text-center"
+                                        style="text-decoration: underline;"> Mis Funciones</label>
+                                        <div class="col-sm-12 col-lg-9">
+                                            <ul id="list-funciones mb-4">
+                                            </ul>
+                                        </div>
+                                </div>
+
+                                <div class="form-group row centrado">
+                                    <button type="button" id="sbtnexperiencia"
+                                        class="btn btn-warning center-block    ">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="centrado">
+                                    <ul id="experiencia" class="list-group">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr size="5px" color="#FF851B" />
+
+                        <!-- HABILIDADES -->
+                        <div class="row mt-5">
+                            <legend class="mb-5 text-center">Habilidades</legend>
+                            <div class="col-md-6">
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Habilidad</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input class="form-control" name="habilidad" id="habilidad" rows="5"
+                                            placeholder="JavaScript" maxlength="40"></input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Porcentaje:</label>
+                                    <div class="col-sm-9 col-lg-9">
+                                        <input type="number" class="form-control" name="porcentaje" id="porcentaje"
+                                            rows="5" placeholder="65" maxlength="40"></input>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row centrado">
+                                    <button type="button" id="btnhabilidad"
+                                        class="btn btn-warning center-block    ">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="centrado">
+                                    <ul id="habilidades" class="list-group">
+                                        <li>
+                                            <a style="width:85%;">
+                                                <p>JavaScript</p>
+                                                <p>95%</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a style="width:54%;">
+                                                <p>JavaScript</p>
+                                                <p>95%</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <hr size="5px" color="#FF851B" />
+
+                        <!-- ASPIRACION DE CARGO -->
+
+                        <div class="row mt-5">
+                            <legend class="mb-5 text-center">Aspiracion de cargo</legend>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Cargo</label>
+                                    <div class="col-sm-8 col-lg-8">
+                                        <input class="form-control" name="cargobuscado" id="cargobuscado" rows="5"
+                                            placeholder="Junior Developer" maxlength="40"></input>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row centrado mt-5">
+                            <button type="button" id="btnsave" class="btn btn-warning center-block    ">Guardar y
+                                crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

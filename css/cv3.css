@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    background-color: #ececec;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    border-radius: 5mm;
+    margin-top: 20px;
+    min-height: 297mm;
+    min-width: 210mm;
+    max-height: 297mm;
+    max-width: 210mm;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.margen {
+    padding: 5mm 5mm 5mm 5mm;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    height: 50mm;
+    width: 200mm;
+    background-color: #018585;
+    display: flex;
+    padding-left: 10mm;
+    padding-right: 10mm;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+}
+
+.img {
+    width: 35mm;
+    height: 45mm;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.img img {
+    width: 30mm;
+    height: 30mm;
+}
+
+.nombre {
+    width: 95mm;
+    height: 100%;
+    color: #fff;
+    padding-top: 2mm;
+}
+
+.nombre h3 {
+    margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.932);
+}
+
+.nombre h6 {
+    margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-top: 1mm;
+    margin-bottom: 4mm;
+    color: rgba(255, 255, 255, 0.815);
+}
+
+.nombre p {
+    margin-bottom: 0;
+    font-size: 11px;
+}
+
+.contacto ul {
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    color: #fafafacb;
+    list-style: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contacto a {
+    font-size: 10px;
+}
+
+.ubication, .email, .telephone {
+    margin-left: 2mm;
+}
+
+.contacto {
+    width: 45mm;
+    height: 100%;
+    margin: auto;
+}
+
+.informacion {
+    width: 200mm;
+    height: 237mm;
+}
+
+.first {
+    width: 60mm;
+    height: 100%;
+    background-color: #04dddd;
+}
+
+.second {
+    width: 140mm;
+    height: 100%;
+    background-color: #04dddd;
+}
+
+
+.banner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 5mm;
+}
+
+.banner hr {
+    width: 60mm;
+    height: 0.3mm;
+    margin-left: 20mm;
+}
+
+.banner h4 {
+    margin-left: 10mm;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 1.5mm;
+    color: #9b9b9bd3;
+}
+
+.educacion {
+    width: 100%;
+}
+
+.experiencia {
+    width: 100%;
+}
+
+.contenedorX {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 3mm;
+    margin-bottom: 3mm;
+}
+
+.left {
+    width: 80mm;
+    text-align: end;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.rigth {
+    width: 120mm;
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+}
+
+.left .up {
+    color: #424242e0;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.left .down {
+    color: rgba(145, 145, 145, 0.87);
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.rigth .up {
+
+    margin-left: 10mm;
+    color: #424242e0;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.rigth .down {
+    margin-left: 10mm;
+    color: rgba(145, 145, 145, 0.87);
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 1mm;
+    text-transform: capitalize;
+}
+
+.funciones p {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 90mm;
+    color: #424242e0;
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 0;
+
+}
+
+.funciones p::before {
+    content: '✓';
+    font-weight: bolder;
+    margin-right: 2mm;
+    color: black;
+
+}

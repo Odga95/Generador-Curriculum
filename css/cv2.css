@@ -1,0 +1,312 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    background-color: #ececec;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    border-radius: 5mm;
+    margin-top: 20px;
+    min-height: 297mm;
+    min-width: 210mm;
+    max-height: 297mm;
+    max-width: 210mm;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.margen {
+    padding: 5mm 5mm 5mm 5mm;
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    background-color: #00ffff;
+    display: flex;
+}
+
+.first {
+    width: 70mm;
+    height: 287mm;
+    background-color: #5a5a5a;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: 110mm;
+    background-color: black;
+}
+
+    @supports(object-fit: cover){
+        img{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+.nombre {
+    padding-top: 5mm;
+    padding-left: 5mm;
+    padding-right: 5mm;
+    margin-bottom: 4mm;
+    height: fit-content;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.nombre legend {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.puesto h4 {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    padding-left: 5mm;
+    padding-right: 5mm;
+    font-size: 13px;
+    font-weight: 100;
+    margin-bottom: 4mm;
+}
+
+.perfil {
+    padding-left: 5mm;
+    padding-right: 5mm;
+    margin-top: 3mm;
+}
+
+.perfil h4, h4 {
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 1.5mm;
+}
+
+.perfil p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.second {
+    width: 130mm;
+    height: 287mm;
+    background-color: white;
+}
+
+.habilidades {
+    padding-left: 5mm;
+    padding-right: 5mm;
+    margin-top: 3mm;
+}
+
+.idiomas {
+    padding-left: 25mm;
+    padding-right: 25mm;
+    margin-top: 3mm;
+}
+
+.skill li {
+    display: flex;
+    margin-bottom: 5px;
+
+}
+
+.skill li p {
+    width: 25mm;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 2mm;
+    text-transform: uppercase;
+    font-size: 12px;
+
+}
+
+.skill li a:hover {
+    color: rgb(245, 241, 241);
+    background-color: #ffca1b;
+}
+
+
+.skill li div {
+    background-color: #ffffff;
+    font-weight: 700;
+    color: white;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.skill li div a {
+
+    background-color: #6b6b6b;
+    display: flex;
+    border-radius: 50px;
+}
+
+
+.skill li a p {
+    margin-left: 1mm;
+}
+
+.habilidades ul {
+
+    margin-top: 3mm;
+}
+
+.contacto {
+    padding-left: 5mm;
+    padding-right: 5mm;
+    margin-top: 3mm;
+    font-size: 12px;
+}
+
+.contacto ul {
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    list-style: none;
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+}
+
+#idiomas li div {
+    background-color: #cccccc;
+}
+
+.banner {
+    padding: 1mm;
+    margin-left: 5mm;
+    background-color: #b3b3b3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 900;
+
+}
+
+.logos {
+    display: flex;
+    width: 100%;
+    height: 20mm;
+}
+
+.logo {
+    margin: auto;
+    align-items: center;
+    width: 20mm;
+    text-align: center;
+}
+
+#estudios div {
+    margin-top: 3mm;
+    margin-left: 5mm;
+}
+
+#estudios div h3 {
+    font-size: 17px;
+    margin: 0;
+}
+
+#estudios div div {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+}
+
+#estudios div h4 {
+    margin-top: 2mm;
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+#estudios div div h5 {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#estudios div div h6 {
+    margin-left: 2mm;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+#experiencia {
+    width: 100%;
+    height: fit-content;
+    margin-left: 7mm;
+}
+
+#experiencia h3 {
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-bottom: 0;
+    margin-top: 4mm;
+    font-weight: 700;
+
+}
+
+#experiencia div div {
+    display: flex;
+    color: #8a8a8a;
+}
+
+#experiencia div div h4 {
+    margin-right: 2mm;
+    font-size: 12px;
+}
+
+#funciones {
+    list-style: none;
+    margin-right: 5mm;
+}
+
+#funciones p {
+    font-size: 13px;
+    margin: 0;
+
+}
+
+#funciones p::before {
+    content: '-';
+    margin-right: 1mm;
+    font-weight: 900;
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+.intereses{
+    padding-left: 5mm;
+    padding-right: 5mm;
+}
+.intereses #funciones li p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.intereses #funciones li p::before{
+    content: '✓';
+    margin-right: 1mm;
+    font-weight: 900;
+    font-size: 13px;
+    color: #fdfdfd;
+}
