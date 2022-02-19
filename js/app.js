@@ -1,4 +1,17 @@
 // SELECTORES
+//INPUTS
+const inputNombre = document.querySelector('#nombre');
+const inputEmail = document.querySelector('#email');
+const inputLinkedin = document.querySelector('#linkedin');
+const inputEdad = document.querySelector('#edad');
+const inputTelefono = document.querySelector('#telefono');
+const inputPais = document.querySelector('#pais');
+const inputCiudad = document.querySelector('#ciudad');
+const inputBarrio = document.querySelector('#barrio');
+const inputDireccion = document.querySelector('#direccion');
+const inputPerfil = document.querySelector('#perfilprofesional');
+const inputAspiracion = document.querySelector('#cargobuscado');
+
 //INTERESES
 const formularioIntereses = document.querySelector('#btnintereses');
 const inputintereses = document.querySelector('#intereses');
@@ -96,6 +109,8 @@ function eventListeners() {
     inputPorcentaje.addEventListener('input', datosHabilidad);
     formularioHabilidad.addEventListener('click', nuevaHabilidad);
 
+    // inputs
+
 }
 
 
@@ -163,9 +178,8 @@ function reiniciarInputInt() {
     inputintereses.value = '';
 }
 
-
-
 // FUNCIONES FORMACION
+
 const formacionObj = {
     institucion: '',
     ubicacion: '',
