@@ -54,7 +54,7 @@
             <div id="contenido" class="row">
                 <legend class="text-center mb-4">Datos personales</legend>
                 <div class="col-lg-12">
-                    <form id="nuevo-formulario">
+                    <form id="nuevo-curriculum">
                         <div class="row">
                             <div class="col-md-6">
                                 <!-- NOMBRE -->
@@ -97,7 +97,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-lg-4 col-form-label">Telefono:</label>
                                     <div class="col-sm-8 col-lg-8">
-                                        <input type="age" id="tel" name="telefono" class="form-control"
+                                        <input type="number" id="telefono" name="telefono" class="form-control"
                                             placeholder="1234567890">
                                     </div>
                                 </div>
@@ -140,7 +140,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-lg-3 col-form-label text-center">Perfil:</label>
                                     <div class="col-sm-9 col-lg-9">
-                                        <textarea class="form-control" name="perfilsoy" id="perfilsoy" rows="5"
+                                        <textarea class="form-control" name="perfilsoy" id="perfilprofesional" rows="5"
                                             placeholder="Breve texto que describa que sabes, que haces… quien eres, que sabes hacer."
                                             maxlength="300    "></textarea>
                                     </div>
@@ -453,7 +453,7 @@
                         </div>
                     </div>
                     <div class="form-group row centrado mt-5">
-                        <button type="button" id="btnsave" class="btn btn-warning center-block    ">Guardar y
+                        <button type="submit" id="btnsave" class="btn btn-warning center-block    ">Guardar y
                             crear</button>
                     </div>
                     </form>
@@ -462,6 +462,7 @@
         </div>
     </main>
     <script src="js/app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
