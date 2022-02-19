@@ -39,7 +39,6 @@ nav ul li a {
   text-decoration: none;
   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   color: white;
-  margin: 4px;
 }
 
 nav ul li a:hover {
@@ -106,15 +105,40 @@ legend {
 
 }
 
-.intereses a {
-  background: rgba(128, 128, 128, 0.514);
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 5px;
-  margin: 2px;
-  color: white;
-  text-transform: capitalize;
+.intereses {
+  width: 100%;
+  display: inline-block;
+}
 
+.intereses div {
+  width: 45%;
+  margin: auto;
+  text-align: center;
+  background: #FF851B;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  color: white;
+  display: flex;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.intereses p {
+  margin-top: 0;
+  margin-left: 5px;
+  margin-bottom: 0;
+  margin-right: auto;
+  color: white;
+
+}
+
+.intereses a {
+  margin: auto;
+  color: white;
+  margin-right: 0;
+  padding: 1px 6px 1px 6px;
+  border-radius: 10px;
+  background-color: rgb(255, 43, 36);
 }
 
 .intereses a:hover {
@@ -122,8 +146,7 @@ legend {
 }
 
 .idioma {
-  font-size: 800;
-  font-weight: bold;
+  width: 100%;
 }
 
 .idioma p:hover {
@@ -131,45 +154,219 @@ legend {
   font-weight: normal;
 }
 
-#habilidades {
+.habilidades {
   width: 100%;
 }
 
-#habilidades li {
+.habilidades li {
   width: 100%;
   background-color: #808080bb;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
   border-radius: 2px;
-  display:flex;
+  display: flex;
   align-items: inline-flex;
   margin-bottom: 5px;
-
 }
 
-#habilidades li a:hover {
+.habilidades li a:hover {
   color: rgb(245, 241, 241);
   background-color: #808080bb;
 }
 
-#habilidades li p{
+.habilidades li p {
   text-align: left;
-  margin:auto;
-  margin-left:3px;
+  margin: auto;
+  margin-left: 3px;
 
 }
-#habilidades li p+p{
-  text-align:right;
-  margin:auto;
-  margin-right:3px;
+
+.habilidades li p+p {
+  text-align: right;
+  margin: auto;
+  margin-right: 3px;
 }
 
-#habilidades li a{
-  width:100%;
+.habilidades li a {
+  width: 100%;
   background-color: #FF851B;
   box-shadow: inset -1px -2px 0px 1px #80808057;
-  display:flex;
+  display: flex;
   border-radius: 2px;
   align-items: inline-flex;
+}
+
+#formacion {
+  width: 100%;
+  display: inline-block;
+}
+
+#formacion div {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 6px;
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 600;
+  position: relative;
+
+}
+
+#formacion div h3,
+#formacion div h6 {
+  margin-bottom: 0;
+}
+
+label {
+  text-transform: capitalize;
+}
+
+#formacion div hr {
+  margin-top: 1px;
+}
+
+
+#formacion div a {
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+  color: white;
+  background-color: rgb(255, 27, 27);
+  border: 1px solid rgb(214, 0, 0);
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  text-decoration: none;
+}
+
+
+#formacion div a:hover {
+  background-color: #6e6e6e;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#educacioncomplementaria {
+  width: 100%;
+  display: inline-block;
+}
+
+#educacioncomplementaria div {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 6px;
+  color: #000000;
+  text-transform: capitalize;
+  font-weight: 600;
+  position: relative;
+
+}
+
+#educacioncomplementaria div h3,
+#educacioncomplementaria div h6 {
+  margin-bottom: 0;
+}
+
+#educacioncomplementaria div hr {
+  margin-top: 1px;
+}
+
+
+#educacioncomplementaria div a {
+  position: absolute;
+  top: 0.2rem;
+  right: 0;
+  color: white;
+  background-color: rgb(255, 27, 27);
+  border: 1px solid rgb(214, 0, 0);
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  text-decoration: none;
+}
+
+#educacioncomplementaria div a:hover {
+  background-color: rgb(110, 110, 110);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#listaFunciones p::before {
+  content: '✓';
+  margin: 2mm;
+  font-weight: 700;
+}
+
+#listaFunciones p {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2px;
+  font-size: 13px;
+  border: 1px solid #504f4f57;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  background-color: #68676757;
+}
+
+#listaFunciones a {
+  padding: 1px 5px 1px 5px;
+  background-color: rgb(236, 0, 0);
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 900;
+  max-width: fit-content;
+  height: fit-content;
+}
+
+#listaFunciones a:hover {
+  cursor: pointer;
+  background-color: #0000009f;
+}
+
+#experiencia div {
+  text-align: left;
+  color: #1b1b1b;
+  position: relative;
+  margin-top: 10px;
+}
+
+#experiencia h3 {
+  margin-bottom: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#experiencia h6 {
+  margin-bottom: 0;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#experiencia p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+
+#experiencia p::before {
+  margin-right: 2px;
+  font-weight: 900;
+  content: '✓';
+}
+
+#experiencia a {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  padding: 1px 5px 1px 5px;
+  background-color: rgb(236, 0, 0);
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 900;
+  max-width: fit-content;
+  height: fit-content;
+}
+
+#experiencia a:hover {
+  cursor: pointer;
 }

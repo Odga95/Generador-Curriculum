@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="js/app.js">
     <title>Document</title>
 </head>
 
@@ -19,13 +18,12 @@
     <nav>
         <ul>
             <li>
-                <a href="">NOSOTROS</a>
-                <a href="">CODIGO</a>
-                <a href="">ENTRAR</a>
-                <a href="">REGISTRARSE</a>
+                <a href="">ABOUT</a>
+                <a href="">CODE</a>
+                <a href="">LOGIN</a>
+                <a href="">REGISTER</a>
             </li>
 
-            
     </nav>
 
     <header>
@@ -139,27 +137,11 @@
                             <legend class="mb-4 text-center">perfil profesional</legend>
                             <div class="col-md-12">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">SOY:</label>
+                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Perfil:</label>
                                     <div class="col-sm-9 col-lg-9">
-                                        <textarea class="form-control" name="perfil" id="perfil" rows="5"
+                                        <textarea class="form-control" name="perfilsoy" id="perfilsoy" rows="5"
                                             placeholder="Breve texto que describa que sabes, que haces… quien eres, que sabes hacer."
                                             maxlength="300    "></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">CON HABILIDADES
-                                        EN:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <textarea class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="Breve texto que describa que sabes, que haces… quien eres, que sabes hacer."></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group row mb-4">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">CON CONOCIMIENTOS
-                                        EN:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <textarea class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="Breve texto que describa que sabes, que haces… quien eres, que sabes hacer."></textarea>
                                     </div>
                                 </div>
 
@@ -168,297 +150,319 @@
                         </div>
 
                         <!-- INTERESES -->
+
                         <div class="row mt-3">
                             <legend class="mb-5 text-center">mis intereses</legend>
                             <div class="col-md-6">
-
                                 <div class="form-group row">
                                     <label class="col-sm-3 col-lg-3 col-form-label text-center">Me gusta:</label>
                                     <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="Viajar" maxlength="15       "></input>
+                                        <input class="form-control" name="intereses" id="intereses" rows="5"
+                                            placeholder="Viajar ( Montañas - Playa)" maxlength="50"></input>
                                     </div>
                                 </div>
+
                                 <div class="form-group row centrado">
                                     <button type="button" id="btnintereses"
                                         class="btn btn-warning center-block ">Agregar</button>
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-                                <div class="intereses centrado">
-                                    <a href="">hola</a>
-                                    <a href="">como</a>
-                                    <a href="">estas</a>
-                                    <a href="">bien</a>
-                                </div>
-                            </div>
-                        </div>
-                        <hr size="5px" color="#FF851B" />
-
-                        <!-- FORMACIÓN -->
-
-                        <div class="row mt-5">
-                            <legend class="mb-5 text-center">Educacion</legend>
-                            <div class="col-md-6">
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Institución:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="3"
-                                            placeholder="Harvard University" maxlength="15"></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Título:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="3"
-                                            placeholder="Bachiller técnico industrial" maxlength="50"></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Periodo:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="3"
-                                            placeholder="Enero 2017 - Diciembre 2022" maxlength="15       "></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row centrado">
-                                    <button type="button" id="btneducacion"
-                                        class="btn btn-warning center-block    ">Agregar</button>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="centrado">
-                                    <ul id="formacion" class="list-group">
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <hr size="5px" color="#FF851B" />
-
-                        <!-- OTROS ESTUDIOS -->
-                        <div class="row mt-5">
-                            <legend class="mb-5 text-center">Educacion complementaria</legend>
-                            <div class="col-md-6">
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Institución:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="Udemy - Curso Virtual " maxlength="15       "></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Título:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="Diseño de interiores" maxlength="15       "></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Duración:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="80 horas" maxlength="15       "></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row centrado">
-                                    <button type="button" id="btneducacionc"
-                                        class="btn btn-warning center-block    ">Agregar</button>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="centrado">
-                                    <ul id="educacioncomplementaria" class="list-group">
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <hr size="5px" color="#FF851B" />
-
-                        <!-- IDIOMAS -->
-                        <div class="row mt-5">
-                            <legend class="mb-5 text-center">Idiomas</legend>
-                            <div class="col-md-6">
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">lenguaje:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="Francés " maxlength="20       "></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Nivel:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="perfil" id="perfil" rows="5"
-                                            placeholder="En escala del 1 al 100 califica tu conocimiento"
-                                            maxlength="20"></input>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row centrado">
-                                    <button type="button" id="btnidioma"
-                                        class="btn btn-warning center-block    ">Agregar</button>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="centrado">
-                                    <ul id="habilidades" class="list-group">
-                                        <li>
-                                            <p>Español</p>
-                                            <a style="width:100%;">
-                                                <p>100%</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a style="width:54%;">
-                                                <p>Ingles</p>
-                                                <p>54%</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <hr size="5px" color="#FF851B" />
-
-                        <!-- EXPERIENCIA LABORAL-->
-
-
-                        <div class="row mt-5">
-                            <legend class="mb-5 text-center">Experiencia laboral</legend>
-                            <div class="col-md-6">
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Nombre de
-                                        Empresa</label>
-                                    <div class="col-sm-7 col-lg-7">
-                                        <input class="form-control" name="empresa" id="empresa" rows="5"
-                                            placeholder="Mecanicos SAS" maxlength="40       "></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Cargo:</label>
-                                    <div class="col-sm-7 col-lg-7">
-                                        <input class="form-control" name="cargo" id="cargo" rows="5"
-                                            placeholder="Mecanico auxiliar" maxlength="40       "></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Periodo:</label>
-                                    <div class="col-sm-7 col-lg-7">
-                                        <input class="form-control" name="perfil" id="Duración" rows="5"
-                                            placeholder="Enero 2017 - Actualidad" maxlength="40"></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center ">funciones:</label>
-                                    <div class="col-sm-7 col-lg-7">
-                                        <textarea class="form-control" name="funciones" id="funciones" rows="3"
-                                            placeholder="Encargado de brindar asistencia mecanica de maquinas industriales"
-                                            maxlength="150"></textarea>
-                                    </div>
-                                    <button type="button" id="sbtnexperiencia"
-                                        class="btn btn-warning center-block col-sm-2 col-lg-2">Agregar Funcion</button>
-                                </div>
-
-                                <div class="form-group row">
-                                    <legend class="col-sm-12 col-lg-12 col-form-label text-center"
-                                        style="text-decoration: underline;"> Mis Funciones</label>
-                                        <div class="col-sm-12 col-lg-9">
-                                            <ul id="list-funciones mb-4">
-                                            </ul>
+                            <div class=" col-md-6">
+                                <div class="form-group row centrado ">
+                                    <div class=" row intereses centrado" id="list-intereses">
+                                        <div>
+                                            <p>Viajar(Playa - Rios - Naturaleza)</p>
+                                            <a href=" #">x</a>
                                         </div>
-                                </div>
-
-                                <div class="form-group row centrado">
-                                    <button type="button" id="sbtnexperiencia"
-                                        class="btn btn-warning center-block    ">Agregar</button>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="centrado">
-                                    <ul id="experiencia" class="list-group">
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <hr size="5px" color="#FF851B" />
-
-                        <!-- HABILIDADES -->
-                        <div class="row mt-5">
-                            <legend class="mb-5 text-center">Habilidades</legend>
-                            <div class="col-md-6">
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Habilidad</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input class="form-control" name="habilidad" id="habilidad" rows="5"
-                                            placeholder="JavaScript" maxlength="40"></input>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Porcentaje:</label>
-                                    <div class="col-sm-9 col-lg-9">
-                                        <input type="number" class="form-control" name="porcentaje" id="porcentaje"
-                                            rows="5" placeholder="65" maxlength="40"></input>
                                     </div>
                                 </div>
 
-                                <div class="form-group row centrado">
-                                    <button type="button" id="btnhabilidad"
-                                        class="btn btn-warning center-block    ">Agregar</button>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="centrado">
-                                    <ul id="habilidades" class="list-group">
-                                        <li>
-                                            <a style="width:85%;">
-                                                <p>JavaScript</p>
-                                                <p>95%</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a style="width:54%;">
-                                                <p>JavaScript</p>
-                                                <p>95%</p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <hr size="5px" color="#FF851B" />
 
-                        <!-- ASPIRACION DE CARGO -->
-
-                        <div class="row mt-5">
-                            <legend class="mb-5 text-center">Aspiracion de cargo</legend>
-                            <div class="col-md-12">
-                                <div class="form-group row">
-                                    <label class="col-sm-3 col-lg-3 col-form-label text-center">Cargo</label>
-                                    <div class="col-sm-8 col-lg-8">
-                                        <input class="form-control" name="cargobuscado" id="cargobuscado" rows="5"
-                                            placeholder="Junior Developer" maxlength="40"></input>
-                                    </div>
-                                </div>
                             </div>
 
                         </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group row  col-form-label text-center centrado" id="alertaIntereses">
+                    </div>
+                    <hr size="5px" color="#FF851B" />
 
-                        <div class="form-group row centrado mt-5">
-                            <button type="button" id="btnsave" class="btn btn-warning center-block    ">Guardar y
-                                crear</button>
+                    <!-- FORMACIÓN -->
+
+                    <div class="row mt-5">
+                        <legend class="mb-5 text-center">Educacion</legend>
+                        <div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Institución:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="institucion" id="institucion" rows="3"
+                                        placeholder="Universidad del Valle" maxlength="50"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Ciudad-País:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="ubicacion" id="ubicacion" rows="3"
+                                        placeholder="Cali-Colombia" maxlength="50"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Título obtenido:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="titulo" id="titulo" rows="3"
+                                        placeholder="Bachiller técnico industrial" maxlength="50"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Duracion:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="duracion" id="duracion" rows="3"
+                                        placeholder="Enero 2017 - Diciembre 2022" maxlength="50"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row centrado">
+                                <button type="button" id="btneducacion"
+                                    class="btn btn-warning center-block">Agregar</button>
+                            </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="centrado">
+                                <ul id="formacion" class="list-group centrado"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row  col-form-label text-center centrado" id="alertaFormacion">
+                    </div>
+                    <hr size="5px" color="#FF851B" />
+
+                    <!-- OTROS ESTUDIOS -->
+                    <div class="row mt-5">
+                        <legend class="mb-5 text-center">Educacion complementaria</legend>
+                        <div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Institución:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="institucionC" id="institucionC" rows="5"
+                                        placeholder="Udemy - Curso Virtual " maxlength="15       "></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Título:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="tituloC" id="tituloC" rows="5"
+                                        placeholder="Diseño de interiores" maxlength="15       "></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Duración:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="duracionC" id="duracionC" rows="5"
+                                        placeholder="80 horas" maxlength="15       "></input>
+                                </div>
+                            </div>
+                            <div class="form-group row centrado">
+                                <button type="button" id="btneducacionC"
+                                    class="btn btn-warning center-block">Agregar</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="centrado">
+                                <ul id="educacioncomplementaria" class="list-group">
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group row  col-form-label text-center centrado" id="alertaFormacionC"></div>
+
+                    <hr size="5px" color="#FF851B" />
+
+                    <!-- IDIOMAS -->
+                    <div class="row mt-5">
+                        <legend class="mb-5 text-center">Idiomas</legend>
+                        <div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">lenguaje:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="idioma" id="idioma" rows="5"
+                                        placeholder="Francés " maxlength="20       "></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Nivel:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input type="number" class="form-control" name="puntaje" id="puntaje" rows="5"
+                                        placeholder="Escribe un numero del 1 al 100 " maxlength="3"></input>
+                                </div>
+                            </div>
+
+                            <div class="form-group row centrado">
+                                <button type="button" id="btnidioma"
+                                    class="btn btn-warning center-block    ">Agregar</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="centrado ">
+                                
+                                <ul class="habilidades" id="listaIdiomas">
+                                    
+                                    <li>
+                                        <a style="width:70%;">
+                                            <p>Idioma ejemplo</p>
+                                            <p>70%</p>
+                                        </a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row  col-form-label text-center centrado" id="alertaIdiomas"></div>
+                    <hr size="5px" color="#FF851B" />
+
+
+                    <!-- EXPERIENCIA LABORAL-->
+                    <div class="row mt-5">
+                        <legend class="mb-5 text-center">Experiencia laboral</legend>
+                        <div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Empresa</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="empresa" id="empresa" rows="5"
+                                        placeholder="Mecanicos SAS" maxlength="40       "></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Cargo:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="cargo" id="cargo" rows="5"
+                                        placeholder="Mecanico auxiliar" maxlength="40"></input>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Periodo:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="periodo" id="periodo" rows="5"
+                                        placeholder="Enero 2017 - Actualidad" maxlength="40"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">funciones:</label>
+                                <div class="col-sm-6 col-lg-6">
+                                    <textarea class="form-control" name="funciones" id="funciones" rows="4"
+                                        placeholder="Asistencia mecanica de maquinas industriales"
+                                        maxlength="150"></textarea>
+                                </div>
+                                <div class="col-sm-3 mt-3 col-lg-3 centrado">
+                                    <button type="button" id="btnAgregarFuncion"
+                                        class="btn btn-warning center-block    ">Agregar Funcion</button>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 col-lg-12 centrado mb-4" name="listaFunciones" id="listaFunciones">
+                            </div>
+
+                            <div class="form-group row centrado">
+                                <button type="button" id="btnexperiencia"
+                                    class="btn btn-warning center-block">Agregar</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="centrado">
+                                <ul id="experiencia" class="list-group">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row  col-form-label text-center centrado" id="alertaExperiencia">
+
+                    </div>
+
+                    <hr size="5px" color="#FF851B" />
+
+                    <!-- HABILIDADES -->
+                    <div class="row mt-5">
+                        <legend class="mb-5 text-center">Habilidades</legend>
+                        <div class="col-md-6">
+
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Habilidad</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input class="form-control" name="habili" id="habili" rows="5"
+                                        placeholder="JavaScript" maxlength="40"></input>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Porcentaje:</label>
+                                <div class="col-sm-9 col-lg-9">
+                                    <input type="number" class="form-control" name="porcentaje" id="porcentaje" rows="5"
+                                        placeholder="Escribe un numero del 1 al 100 " maxlength="40"></input>
+                                </div>
+                            </div>
+
+                            <div class="form-group row centrado">
+                                <button type="button" id="btnhabilidad"
+                                    class="btn btn-warning center-block    ">Agregar</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="centrado">
+                                <ul id="habilidades" class="list-group habilidades">
+                                    <li>
+                                        <a style="width:85%;">
+                                            <p>JavaScript</p>
+                                            <p>95%</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a style="width:54%;">
+                                            <p>JavaScript</p>
+                                            <p>95%</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row  col-form-label text-center centrado" id="alertaHabilidades">
+
+                    </div>
+                    <hr size="5px" color="#FF851B" />
+
+                    <!-- ASPIRACION DE CARGO -->
+
+                    <div class="row mt-5">
+                        <legend class="mb-5 text-center">Aspiracion de cargo</legend>
+                        <div class="col-md-12">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-lg-3 col-form-label text-center">Cargo</label>
+                                <div class="col-sm-8 col-lg-8">
+                                    <input class="form-control" name="cargobuscado" id="cargobuscado" rows="5"
+                                        placeholder="Junior Developer" maxlength="40"></input>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row centrado mt-5">
+                        <button type="button" id="btnsave" class="btn btn-warning center-block    ">Guardar y
+                            crear</button>
+                    </div>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
