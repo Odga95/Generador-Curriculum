@@ -113,6 +113,7 @@ function nuevoIntereses(e) {
     intereses = [...intereses, interes];
 
     agregarInteres(intereses);
+    reiniciarInputInt();
 
 
 }
@@ -158,6 +159,11 @@ function eliminarCampo(e) {
         agregarInteres(intereses);
     }
 }
+function reiniciarInputInt() {
+    inputintereses.value = '';
+}
+
+
 
 // FUNCIONES FORMACION
 const formacionObj = {
@@ -571,6 +577,7 @@ function nuevoIdioma(e) {
     idiomas = [...idiomas, { ...idiomasObj }];
 
     agregarIdioma();
+    reiniciarObjI();
 }
 
 function mensajeAlertaI(mensaje, tipo) {
@@ -628,6 +635,17 @@ function eliminarIdioma(id) {
     agregarIdioma(idiomas);
 }
 
+function reiniciarObjI() {
+    idioma = '';
+    puntaje = '';
+    resetearInputsI();
+}
+
+function resetearInputsI() {
+    inputLenguaje.value = '';
+    inputPuntaje.value = '';
+}
+
 
 // FUNCIONES HABILIDADES
 
@@ -656,6 +674,7 @@ function nuevaHabilidad(e) {
     habilidades = [...habilidades, { ...HabilidadObj }];
 
     agregarHabilidad();
+    reiniciarObjH();
 }
 
 function mensajeAlertaH(mensaje, tipo) {
@@ -712,3 +731,16 @@ function eliminarHabilidad(id) {
     //MostrarHTML
     agregarHabilidad(habilidades);
 }
+
+function reiniciarObjH() {
+    inputHabilidad.value = '';
+    inputPorcentaje.value = '';
+    resetearInputsH();
+}
+
+function resetearInputsH() {
+    habili = '';
+    porcentaje = ''; s
+}
+
+//
