@@ -1,4 +1,18 @@
 // SELECTORES
+//INPUTS
+const inputNombre = document.querySelector('#nombre');
+const inputEmail = document.querySelector('#email');
+const inputLinkedin = document.querySelector('#linkedin');
+const inputEdad = document.querySelector('#edad');
+const inputTelefono = document.querySelector('#telefono');
+const inputPais = document.querySelector('#pais');
+const inputCiudad = document.querySelector('#ciudad');
+const inputBarrio = document.querySelector('#barrio');
+const inputDireccion = document.querySelector('#direccion');
+const inputPerfil = document.querySelector('#perfilprofesional');
+const inputAspiracion = document.querySelector('#cargobuscado');
+const formularioCV = document.querySelector('#nuevo-curriculum')
+
 //INTERESES
 const formularioIntereses = document.querySelector('#btnintereses');
 const inputintereses = document.querySelector('#intereses');
@@ -96,6 +110,20 @@ function eventListeners() {
     inputPorcentaje.addEventListener('input', datosHabilidad);
     formularioHabilidad.addEventListener('click', nuevaHabilidad);
 
+    //Formulario CV
+    inputNombre.addEventListener('input', datosPerfil);
+    inputEmail.addEventListener('input', datosPerfil);
+    inputLinkedin.addEventListener('input', datosPerfil);
+    inputEdad.addEventListener('input', datosPerfil);
+    inputTelefono.addEventListener('input', datosPerfil);
+    inputPais.addEventListener('input', datosPerfil);
+    inputCiudad.addEventListener('input', datosPerfil);
+    inputBarrio.addEventListener('input', datosPerfil);
+    inputDireccion.addEventListener('input', datosPerfil);
+    inputPerfil.addEventListener('input', datosPerfil);
+    inputAspiracion.addEventListener('input', datosPerfil);
+    formularioCV.addEventListener('submit', cargarDatosCV);
+
 }
 
 
@@ -159,13 +187,13 @@ function eliminarCampo(e) {
         agregarInteres(intereses);
     }
 }
+
 function reiniciarInputInt() {
     inputintereses.value = '';
 }
 
-
-
 // FUNCIONES FORMACION
+
 const formacionObj = {
     institucion: '',
     ubicacion: '',
@@ -743,4 +771,62 @@ function resetearInputsH() {
     porcentaje = ''; s
 }
 
-//
+//CARGAR DATOS
+
+const perfilObj = {
+    nombre: '',
+    email: '',
+    linkedin: '',
+    edad: '',
+    telefono: '',
+    pais: '',
+    ciudad: '',
+    barrio: '',
+    direccion: '',
+    perfil: '',
+    aspiracion: '',
+}
+
+function datosPerfil(e) {
+    perfilObj[e.target.name] = e.target.value;
+}
+
+
+function cargarDatosCV(e) {
+    e.preventDefault();
+
+    const { nombre,
+        email,
+        linkedin,
+        edad,
+        telefono,
+        pais,
+        ciudad,
+        barrio,
+        direccion,
+        perfil,
+        aspiracion } = perfilObj;
+
+    if (nombre === '' || email === '' || linkedin === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion) {
+        Swal.fire(
+            'Ohh no!',
+            'Faltan campos por llenar!'
+        );
+        return;
+    }
+    const verify = verificar();
+    window.open(`cv${verify}.html`, "_self");
+}
+
+function verificar() {
+    let number;
+    if (document.getElementById('sbutton1').checked) {
+        return number = 1;
+    }
+    if (document.getElementById('sbutton2').checked) {
+        return number = 2;
+    }
+    if (document.getElementById('sbutton3').checked) {
+        return number = 3;
+    }
+}
