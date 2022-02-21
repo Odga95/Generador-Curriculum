@@ -1,5 +1,4 @@
 // SELECTORES
-
 const formularioCV = document.querySelector('#nuevo-curriculum')
 
 //INTERESES
@@ -53,7 +52,7 @@ let experiencia = [];
 let intereses = [];
 let formacionC = [];
 let idiomas = [];
-export let habilidades = [];
+let habilidades = [];
 
 //ARREGLOS SECUNDARIOS
 let funciones = [];
@@ -63,6 +62,7 @@ console.log(urlActual);
 
 document.addEventListener('DOMContentLoaded', () => {
     //Intereses
+    console.log(habilidades);
     if (urlActual === '/index.html') {
 
         formularioIntereses.addEventListener('click', nuevoIntereses);
@@ -101,20 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formularioHabilidad.addEventListener('click', nuevaHabilidad);
 
         //Formulario CV
-        // inputNombre.addEventListener('input', datosPerfil);
-        // inputEmail.addEventListener('input', datosPerfil);
-        // inputLinkedin.addEventListener('input', datosPerfil);
-        // inputEdad.addEventListener('input', datosPerfil);
-        // inputTelefono.addEventListener('input', datosPerfil);
-        // inputPais.addEventListener('input', datosPerfil);
-        // inputCiudad.addEventListener('input', datosPerfil);
-        // inputBarrio.addEventListener('input', datosPerfil);
-        // inputDireccion.addEventListener('input', datosPerfil);
-        // inputPerfil.addEventListener('input', datosPerfil);
-        // inputAspiracion.addEventListener('input', datosPerfil);
         formularioCV.addEventListener('submit', cargarDatosCV);
-
-
     }
 
 });
@@ -767,50 +754,53 @@ function resetearInputsH() {
 
 //CARGAR DATOS
 
-const perfilObj = {
-    nombre: '',
-    email: '',
-    linkedin: '',
-    edad: '',
-    telefono: '',
-    pais: '',
-    ciudad: '',
-    barrio: '',
-    direccion: '',
-    perfil: '',
-    aspiracion: '',
-}
-
-function datosPerfil(e) {
-    perfilObj[e.target.name] = e.target.value;
-}
-
-
 function cargarDatosCV(e) {
-    e.preventDefault();
-    let nombre = document.getElementById('#nombre').value;
-    let email = document.getElementById('#email').value;
-    let linkedin = document.getElementById('#linkedin').value;
-    let edad = document.getElementById('#edad').value;
-    let telefono = document.getElementById('#telefono').value;
-    let pais = document.getElementByIdF('#pais').value;
-    let ciudad = document.getElementById('#ciudad').value;
-    let barrio = document.getElementById('#barrio').value;
-    let direccion = document.getElementById('#direccion').value;
-    let prefil = document.getElementById('#perfilprofesional').value;
-    let aspiracion = document.getElementById('#cargobuscado').value;
 
-    if (nombre === '' || email === '' || linkedin === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion) {
-        Swal.fire(
-            'Ohh no!',
-            'Faltan campos por llenar!'
-        );
-        return;
+    e.preventDefault();
+
+    let nombre = document.getElementById('nombre').value;
+    let email = document.getElementById('email').value;
+    let linkedin = document.getElementById('linkedin').value;
+    let edad = document.getElementById('edad').value;
+    let telefono = document.getElementById('telefono').value;
+    let pais = document.getElementById('pais').value;
+    let ciudad = document.getElementById('ciudad').value;
+    let barrio = document.getElementById('barrio').value;
+    let direccion = document.getElementById('direccion').value;
+    let perfil = document.getElementById('perfilprofesional').value;
+    let aspiracion = document.getElementById('cargobuscado').value;
+
+    // if (nombre === '' || email === '' || linkedin === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion) {
+    //     Swal.fire(
+    //         'Ohh no!',
+    //         'Faltan campos por llenar!'
+    //     );
+    //     return;
+    // }
+
+    const datosPersonalesObj = {
+        nombre, email, edad, telefono, linkedin, pais, ciudad, barrio, direccion, perfil, aspiracion
     }
 
-    const verify = verificar();
+    const lsperfil = JSON.stringify(datosPersonalesObj);
+    const lsformacion = JSON.stringify(formacion);
+    const lsexperiencia = JSON.stringify(experiencia);
+    const lsintereses = JSON.stringify(intereses);
+    const lsformacionC = JSON.stringify(formacionC);
+    const lsidiomas = JSON.stringify(idiomas);
+    const lshabilidades = JSON.stringify(habilidades);
 
-    window.open(`cv${verify}.html`, "_self");
+    localStorage.setItem('perfil', lsperfil)
+    localStorage.setItem('formacion', lsformacion)
+    localStorage.setItem('experiencia', lsexperiencia)
+    localStorage.setItem('formacionC', lsintereses)
+    localStorage.setItem('intereses', lsformacionC)
+    localStorage.setItem('idiomas', lsidiomas)
+    localStorage.setItem('habilidades', lshabilidades)
+
+    const verify = verificar();
+    window.open(`cv${verify}.html`);
+
 }
 
 function verificar() {
