@@ -1,16 +1,4 @@
 // SELECTORES
-//INPUTS
-const inputNombre = document.querySelector('#nombre');
-const inputEmail = document.querySelector('#email');
-const inputLinkedin = document.querySelector('#linkedin');
-const inputEdad = document.querySelector('#edad');
-const inputTelefono = document.querySelector('#telefono');
-const inputPais = document.querySelector('#pais');
-const inputCiudad = document.querySelector('#ciudad');
-const inputBarrio = document.querySelector('#barrio');
-const inputDireccion = document.querySelector('#direccion');
-const inputPerfil = document.querySelector('#perfilprofesional');
-const inputAspiracion = document.querySelector('#cargobuscado');
 const formularioCV = document.querySelector('#nuevo-curriculum')
 
 //INTERESES
@@ -69,62 +57,54 @@ let habilidades = [];
 //ARREGLOS SECUNDARIOS
 let funciones = [];
 
-eventListeners();
+let urlActual = window.location.pathname;
+console.log(urlActual);
 
-// EVENTLISTENERS
-function eventListeners() {
-
+document.addEventListener('DOMContentLoaded', () => {
     //Intereses
-    formularioIntereses.addEventListener('click', nuevoIntereses);
-    listaintereses.addEventListener('click', eliminarCampo);
+    console.log(habilidades);
+    if (urlActual === '/index.html') {
 
-    //formacion
-    inputinstitucion.addEventListener('input', datosFormacion);
-    inputubicacion.addEventListener('input', datosFormacion);
-    inputtitulo.addEventListener('input', datosFormacion);
-    inputduracion.addEventListener('input', datosFormacion);
-    formularioFormacion.addEventListener('click', nuevoEstudio);
-    listaFormacion.addEventListener('click', eliminarFormacion);
+        formularioIntereses.addEventListener('click', nuevoIntereses);
+        listaintereses.addEventListener('click', eliminarCampo);
 
-    //Otros Estudios
-    inputinstitucionC.addEventListener('input', datosFormacionC);
-    inputtituloC.addEventListener('input', datosFormacionC);
-    inputduracionC.addEventListener('input', datosFormacionC);
-    formularioFormacionC.addEventListener('click', nuevoEstudioC);
-    listaFormacionC.addEventListener('click', eliminarFormacionC);
+        //formacion
+        inputinstitucion.addEventListener('input', datosFormacion);
+        inputubicacion.addEventListener('input', datosFormacion);
+        inputtitulo.addEventListener('input', datosFormacion);
+        inputduracion.addEventListener('input', datosFormacion);
+        formularioFormacion.addEventListener('click', nuevoEstudio);
+        listaFormacion.addEventListener('click', eliminarFormacion);
 
-    //Experiencias
-    inputEmpresa.addEventListener('input', datosExperiencia);
-    inputCargo.addEventListener('input', datosExperiencia);
-    inputPeriodo.addEventListener('input', datosExperiencia);
-    btnAgregarFuncion.addEventListener('click', agregarFuncion);
-    formularioExperiencia.addEventListener('click', nuevaExperiencia);
+        //Otros Estudios
+        inputinstitucionC.addEventListener('input', datosFormacionC);
+        inputtituloC.addEventListener('input', datosFormacionC);
+        inputduracionC.addEventListener('input', datosFormacionC);
+        formularioFormacionC.addEventListener('click', nuevoEstudioC);
+        listaFormacionC.addEventListener('click', eliminarFormacionC);
 
-    //Idiomas
-    inputLenguaje.addEventListener('input', datosIdioma);
-    inputPuntaje.addEventListener('input', datosIdioma);
-    formularioIdiomas.addEventListener('click', nuevoIdioma);
+        //Experiencias
+        inputEmpresa.addEventListener('input', datosExperiencia);
+        inputCargo.addEventListener('input', datosExperiencia);
+        inputPeriodo.addEventListener('input', datosExperiencia);
+        btnAgregarFuncion.addEventListener('click', agregarFuncion);
+        formularioExperiencia.addEventListener('click', nuevaExperiencia);
 
-    //Habilidades
-    inputHabilidad.addEventListener('input', datosHabilidad);
-    inputPorcentaje.addEventListener('input', datosHabilidad);
-    formularioHabilidad.addEventListener('click', nuevaHabilidad);
+        //Idiomas
+        inputLenguaje.addEventListener('input', datosIdioma);
+        inputPuntaje.addEventListener('input', datosIdioma);
+        formularioIdiomas.addEventListener('click', nuevoIdioma);
 
-    //Formulario CV
-    inputNombre.addEventListener('input', datosPerfil);
-    inputEmail.addEventListener('input', datosPerfil);
-    inputLinkedin.addEventListener('input', datosPerfil);
-    inputEdad.addEventListener('input', datosPerfil);
-    inputTelefono.addEventListener('input', datosPerfil);
-    inputPais.addEventListener('input', datosPerfil);
-    inputCiudad.addEventListener('input', datosPerfil);
-    inputBarrio.addEventListener('input', datosPerfil);
-    inputDireccion.addEventListener('input', datosPerfil);
-    inputPerfil.addEventListener('input', datosPerfil);
-    inputAspiracion.addEventListener('input', datosPerfil);
-    formularioCV.addEventListener('submit', cargarDatosCV);
+        //Habilidades
+        inputHabilidad.addEventListener('input', datosHabilidad);
+        inputPorcentaje.addEventListener('input', datosHabilidad);
+        formularioHabilidad.addEventListener('click', nuevaHabilidad);
 
-}
+        //Formulario CV
+        formularioCV.addEventListener('submit', cargarDatosCV);
+    }
+
+});
 
 
 // FUNCIONES INTERESES
@@ -664,8 +644,8 @@ function eliminarIdioma(id) {
 }
 
 function reiniciarObjI() {
-    idioma = '';
-    puntaje = '';
+    idiomasObj.idioma = '';
+    idiomasObj.puntaje = '';
     resetearInputsI();
 }
 
@@ -761,61 +741,66 @@ function eliminarHabilidad(id) {
 }
 
 function reiniciarObjH() {
-    inputHabilidad.value = '';
-    inputPorcentaje.value = '';
+    HabilidadObj.habili = '';
+    HabilidadObj.porcentaje = '';
     resetearInputsH();
 }
 
 function resetearInputsH() {
-    habili = '';
-    porcentaje = ''; s
+
+    inputHabilidad.value = '';
+    inputPorcentaje.value = '';
 }
 
 //CARGAR DATOS
 
-const perfilObj = {
-    nombre: '',
-    email: '',
-    linkedin: '',
-    edad: '',
-    telefono: '',
-    pais: '',
-    ciudad: '',
-    barrio: '',
-    direccion: '',
-    perfil: '',
-    aspiracion: '',
-}
-
-function datosPerfil(e) {
-    perfilObj[e.target.name] = e.target.value;
-}
-
-
 function cargarDatosCV(e) {
+
     e.preventDefault();
 
-    const { nombre,
-        email,
-        linkedin,
-        edad,
-        telefono,
-        pais,
-        ciudad,
-        barrio,
-        direccion,
-        perfil,
-        aspiracion } = perfilObj;
+    let nombre = document.getElementById('nombre').value;
+    let email = document.getElementById('email').value;
+    let linkedin = document.getElementById('linkedin').value;
+    let edad = document.getElementById('edad').value;
+    let telefono = document.getElementById('telefono').value;
+    let pais = document.getElementById('pais').value;
+    let ciudad = document.getElementById('ciudad').value;
+    let barrio = document.getElementById('barrio').value;
+    let direccion = document.getElementById('direccion').value;
+    let perfil = document.getElementById('perfilprofesional').value;
+    let aspiracion = document.getElementById('cargobuscado').value;
 
-    if (nombre === '' || email === '' || linkedin === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion) {
-        Swal.fire(
-            'Ohh no!',
-            'Faltan campos por llenar!'
-        );
-        return;
+    // if (nombre === '' || email === '' || linkedin === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion) {
+    //     Swal.fire(
+    //         'Ohh no!',
+    //         'Faltan campos por llenar!'
+    //     );
+    //     return;
+    // }
+
+    const datosPersonalesObj = {
+        nombre, email, edad, telefono, linkedin, pais, ciudad, barrio, direccion, perfil, aspiracion
     }
+
+    const lsperfil = JSON.stringify(datosPersonalesObj);
+    const lsformacion = JSON.stringify(formacion);
+    const lsexperiencia = JSON.stringify(experiencia);
+    const lsintereses = JSON.stringify(intereses);
+    const lsformacionC = JSON.stringify(formacionC);
+    const lsidiomas = JSON.stringify(idiomas);
+    const lshabilidades = JSON.stringify(habilidades);
+
+    localStorage.setItem('perfil', lsperfil)
+    localStorage.setItem('formacion', lsformacion)
+    localStorage.setItem('experiencia', lsexperiencia)
+    localStorage.setItem('formacionC', lsintereses)
+    localStorage.setItem('intereses', lsformacionC)
+    localStorage.setItem('idiomas', lsidiomas)
+    localStorage.setItem('habilidades', lshabilidades)
+
     const verify = verificar();
-    window.open(`cv${verify}.html`, "_self");
+    window.open(`cv${verify}.html`);
+
 }
 
 function verificar() {
