@@ -57,14 +57,12 @@ let habilidades = [];
 //ARREGLOS SECUNDARIOS
 let funciones = [];
 
-let urlActual = window.location.pathname;
-console.log(urlActual);
 
 document.addEventListener('DOMContentLoaded', () => {
-    //Intereses
-    console.log(habilidades);
-    if (urlActual === '/index.html') {
 
+    let urlActual = window.location.pathname;
+    if (urlActual === '/index.html') {
+        //Intereses
         formularioIntereses.addEventListener('click', nuevoIntereses);
         listaintereses.addEventListener('click', eliminarCampo);
 
