@@ -768,13 +768,13 @@ function cargarDatosCV(e) {
     let perfil = document.getElementById('perfilprofesional').value;
     let aspiracion = document.getElementById('cargobuscado').value;
 
-    // if (nombre === '' || email === '' || linkedin === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion) {
-    //     Swal.fire(
-    //         'Ohh no!',
-    //         'Faltan campos por llenar!'
-    //     );
-    //     return;
-    // }
+    if (nombre === '' || email === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion=== '') {
+        Swal.fire(
+            'Ohh no!',
+            'Faltan campos por llenar!'
+        );
+        return;
+    }
 
     const datosPersonalesObj = {
         nombre, email, edad, telefono, linkedin, pais, ciudad, barrio, direccion, perfil, aspiracion
@@ -791,8 +791,8 @@ function cargarDatosCV(e) {
     localStorage.setItem('perfil', lsperfil)
     localStorage.setItem('formacion', lsformacion)
     localStorage.setItem('experiencia', lsexperiencia)
-    localStorage.setItem('formacionC', lsintereses)
-    localStorage.setItem('intereses', lsformacionC)
+    localStorage.setItem('formacionC', lsformacionC)
+    localStorage.setItem('intereses', lsintereses)
     localStorage.setItem('idiomas', lsidiomas)
     localStorage.setItem('habilidades', lshabilidades)
 

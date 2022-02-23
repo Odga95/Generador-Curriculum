@@ -29,14 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     llenarHabilidades(Ghabilidades);
     llenarIdiomas(Gidiomas);
-    llenarEducacion(Gformacion, Gintereses);
+    llenarEducacion(Gformacion, GformacionC);
     llenarIntereses(Gintereses);
     llenarExperiencia(Gexperiencia);
 });
 
 
-
-//Intereses
 
 function llenarIntereses(intereses) {
     intereses.forEach(interes => {
@@ -141,5 +139,36 @@ function llenarEducacion(educacion, educacionC) {
 }
 
 function llenarExperiencia(experiencia) {
+
+    experiencia.forEach(exp => {
+
+        const { empresa, cargo, periodo, funcion } = exp;
+
+        const div = document.createElement('div');
+        const legend = document.createElement('legend');
+        const h4 = document.createElement('h4');
+        const h6 = document.createElement('h6');
+        const divP = document.createElement('div');
+
+        funcion.forEach(fun => {
+            const parrafo = document.createElement('p');
+            parrafo.textContent = fun;
+            divP.appendChild(parrafo);
+        })
+
+
+        legend.textContent = `${cargo}`;
+        h4.textContent = `${empresa}`;
+        h6.textContent = `${periodo}`;
+
+        div.appendChild(legend);
+        div.appendChild(h4);
+        div.appendChild(h6);
+        div.appendChild(divP);
+
+
+        listaExperiencia.appendChild(div);
+
+    });
 
 }

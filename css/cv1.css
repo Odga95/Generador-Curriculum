@@ -121,7 +121,7 @@ img {
 .informacion {
     width: 200mm;
     height: 242mm;
-    padding-top: 8mm;
+    padding-top: 6mm;
     background-color: white;
 }
 
@@ -263,24 +263,24 @@ img {
     line-height: normal;
 }
 
-.educacion legend {
+.econtainer legend {
     text-transform: uppercase;
     font-size: 18px;
 }
 
-.educacion legend,
-.educacion h4,
-.educacion h6 {
+.econtainer legend,
+.econtainer h4,
+.econtainer h6 {
     margin-bottom: 0;
 }
 
-.educacion h4 {
+.econtainer h4 {
     font-size: 15px;
-    font-weight: 600;
+    color: black;
 }
 
-.educacion div {
-    margin-bottom: 5mm;
+#educacion div {
+    margin-bottom: 3mm;
 }
 
 .experiencia {
@@ -294,6 +294,17 @@ img {
     background-color: #ffca1b;
 }
 
-.linkedin::before {
-    content: .icono;
+.econtainer p::before {
+    content: '✓';
+    font-weight: 900;
+    margin-right: 2mm;
+}
+
+.econtainer p{
+    margin-bottom: 0;
+    line-height: normal;
+}
+
+#experiencia div{
+    margin-bottom: 3mm;
 }
