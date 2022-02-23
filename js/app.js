@@ -770,7 +770,7 @@ function cargarDatosCV(e) {
     let twitter = document.getElementById('twitter').value;
     let instagram = document.getElementById('instagram').value;
 
-    // if (nombre === '' ||twitter === '' ||instagram === '' || email === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion === '') {
+    // if (nombre === '' || email === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion === '') {
     //     Swal.fire(
     //         'Ohh no!',
     //         'Faltan campos por llenar!'

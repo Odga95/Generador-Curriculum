@@ -15,14 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const Gidiomas = JSON.parse(localStorage.getItem('idiomas'));
     const Ghabilidades = JSON.parse(localStorage.getItem('habilidades'));
 
-    const { nombre, email, telefono, linkedin, direccion, perfil, aspiracion } = Gperfil
-
+    const { nombre, email, telefono, linkedin, direccion, perfil, aspiracion, twitter, instagram } = Gperfil
 
     //Objeto Perfil
     document.getElementById('nombre').textContent = nombre;
     document.getElementById('email').textContent = email;
     document.getElementById('telephone').textContent = telefono;
-    document.getElementById('linkedin').innerHTML = `<i class="fa-brands fa-linkedin"></i><a>${linkedin}</a>`;
     document.getElementById('direccion').textContent = direccion;
     document.getElementById('presentacion').innerHTML = `<p>${perfil}</p>`;
     document.getElementById('cargobuscado').textContent = aspiracion;
@@ -32,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     llenarEducacion(Gformacion, GformacionC);
     llenarIntereses(Gintereses);
     llenarExperiencia(Gexperiencia);
+    llenarTI(linkedin, twitter, instagram);
+
 });
 
 
@@ -171,4 +171,32 @@ function llenarExperiencia(experiencia) {
 
     });
 
+}
+function soloNombre(nombre) {
+    nombre = nombre.replace('/in/', '')
+    nombre = nombre.replace('/', '')
+    nombre = nombre.replace('/', '')
+    nombre = nombre.replace('/', '')
+    nombre = nombre.replace('www', '')
+    nombre = nombre.replace('www.', '')
+    nombre = nombre.replace('linkedin', '')
+    nombre = nombre.replace('http:', '')
+    nombre = nombre.replace('https:', '')
+    nombre = nombre.replace('.com', '')
+    return (nombre);
+}
+
+function llenarTI(linkedin, twitter, instagram) {
+
+    const nombreLinkedin = soloNombre(linkedin);
+
+    if (linkedin) {
+        document.getElementById('linkedin').innerHTML = `<i class="fa-brands fa-linkedin"></i><a>${nombreLinkedin}</a>`;
+    }
+    if (twitter) {
+        document.getElementById('twitter').innerHTML = `<i class="fa-brands fa-twitter"></i><a>${twitter}</a>`;
+    }
+    if (instagram) {
+        document.getElementById('instagram').innerHTML = `<i class="fa-brands fa-instagram"></i><a>${instagram}</a>`;
+    }
 }
