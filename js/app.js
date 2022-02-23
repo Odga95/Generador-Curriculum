@@ -767,17 +767,19 @@ function cargarDatosCV(e) {
     let direccion = document.getElementById('direccion').value;
     let perfil = document.getElementById('perfilprofesional').value;
     let aspiracion = document.getElementById('cargobuscado').value;
+    let twitter = document.getElementById('twitter').value;
+    let instagram = document.getElementById('instagram').value;
 
-    if (nombre === '' || email === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion=== '') {
-        Swal.fire(
-            'Ohh no!',
-            'Faltan campos por llenar!'
-        );
-        return;
-    }
+    // if (nombre === '' ||twitter === '' ||instagram === '' || email === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion === '') {
+    //     Swal.fire(
+    //         'Ohh no!',
+    //         'Faltan campos por llenar!'
+    //     );
+    //     return;
+    // }
 
     const datosPersonalesObj = {
-        nombre, email, edad, telefono, linkedin, pais, ciudad, barrio, direccion, perfil, aspiracion
+        nombre, email, edad, telefono, linkedin, pais, ciudad, barrio, direccion, perfil, aspiracion, twitter, instagram
     }
 
     const lsperfil = JSON.stringify(datosPersonalesObj);
