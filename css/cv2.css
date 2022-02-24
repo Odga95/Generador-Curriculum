@@ -49,13 +49,13 @@ img {
     background-color: black;
 }
 
-    @supports(object-fit: cover){
-        img{
-          height: 100%;
-          object-fit: cover;
-          object-position: center center;
-        }
+@supports(object-fit: cover) {
+    img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
+}
 
 .nombre {
     padding-top: 5mm;
@@ -114,8 +114,9 @@ img {
 }
 
 .idiomas {
-    padding-left: 25mm;
-    padding-right: 25mm;
+    color: #313131;
+    padding-left: 7mm;
+    padding-right: 5mm;
     margin-top: 3mm;
 }
 
@@ -143,6 +144,8 @@ img {
 
 
 .skill li div {
+
+    height: 4.5mm;
     background-color: #ffffff;
     font-weight: 700;
     color: white;
@@ -181,7 +184,6 @@ img {
     color: #fff;
     list-style: none;
     display: flex;
-
     justify-content: center;
     flex-direction: column;
 }
@@ -210,53 +212,45 @@ img {
 .logo {
     margin: auto;
     align-items: center;
-    width: 20mm;
+    width: fit-content;
     text-align: center;
 }
 
 #estudios div {
-    margin-top: 3mm;
     margin-left: 5mm;
+    line-height: normal;
+    margin-bottom: 3mm;
 }
 
-#estudios div h3 {
-    font-size: 17px;
-    margin: 0;
-}
-
-#estudios div div {
-    display: flex;
-    align-items: flex-end;
-    margin: 0;
+#estudios div h6 {
+    font-size: 15px;
+    margin-bottom: 0;
 }
 
 #estudios div h4 {
-    margin-top: 2mm;
     color: #8a8a8a;
     font-size: 12px;
     text-transform: capitalize;
+    margin-bottom: 0;
 }
 
-#estudios div div h5 {
+#estudios div legend {
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
     margin: 0;
-}
-
-#estudios div div h6 {
-    margin-left: 2mm;
-    margin-bottom: 0;
-    font-size: 14px;
+    color: #525151;
 }
 
 #experiencia {
     width: 100%;
     height: fit-content;
     margin-left: 7mm;
+    margin-bottom: 0;
 }
 
-#experiencia h3 {
+#experiencia legend {
+    color: #525151;
     text-transform: uppercase;
     font-size: 17px;
     margin-bottom: 0;
@@ -265,15 +259,32 @@ img {
 
 }
 
-#experiencia div div {
-    display: flex;
+#experiencia h4 {
     color: #8a8a8a;
-}
-
-#experiencia div div h4 {
     margin-right: 2mm;
     font-size: 12px;
+    margin-bottom: 0;
 }
+
+#experiencia h6 {
+    color: #8d8d8d;
+    margin-right: 2mm;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+#experiencia p {
+    margin-right: 2mm;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+#experiencia p::before{
+    content: '✓';
+    font-weight: 900;
+    margin-right: 2mm;
+}
+
 
 #funciones {
     list-style: none;
@@ -294,19 +305,25 @@ img {
     color: #b3b3b3;
 }
 
-.intereses{
-    padding-left: 5mm;
+.intereses {
+    padding-left: 7mm;
     padding-right: 5mm;
-}
-.intereses #funciones li p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    color: #353535;
+    line-height: normal;
 }
 
-.intereses #funciones li p::before{
+.intereses li {
+    list-style:none
+}
+
+.intereses li::before {
     content: '✓';
     margin-right: 1mm;
     font-weight: 900;
     font-size: 13px;
-    color: #fdfdfd;
+    color: #000000;
+}
+
+#linkedin i {
+    margin-right: 1mm;
 }

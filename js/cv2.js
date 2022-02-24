@@ -1,8 +1,8 @@
-//SELECTORES f
+//SELECTORES
 const listaIntereses = document.querySelector('#intereses');
 const listaIdiomas = document.querySelector('#idiomas');
 const listaHabilidades = document.querySelector('#habilidades');
-const listaEducacion = document.querySelector('#educacion');
+const listaEducacion = document.querySelector('#estudios');
 const listaExperiencia = document.querySelector('#experiencia');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,22 +19,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Objeto Perfil
     document.getElementById('nombre').textContent = nombre;
-    document.getElementById('email').textContent = email;
-    document.getElementById('telephone').textContent = telefono;
-    document.getElementById('direccion').textContent = direccion;
-    document.getElementById('presentacion').innerHTML = `<p>${perfil}</p>`;
     document.getElementById('cargobuscado').textContent = aspiracion;
+    document.getElementById('presentacion').textContent = perfil;
+    document.getElementById('telephone').textContent = telefono;
+
+    document.getElementById('direccion').textContent = direccion;
+    document.getElementById('email').textContent = email;
 
     llenarHabilidades(Ghabilidades);
     llenarIdiomas(Gidiomas);
     llenarEducacion(Gformacion, GformacionC);
     llenarIntereses(Gintereses);
     llenarExperiencia(Gexperiencia);
-    llenarTI(linkedin, twitter, instagram);
+    llenarlogos(linkedin, twitter, instagram);
 
 });
 
+function llenarHabilidades(habilidades) {
+    habilidades.forEach(habilidad => {
 
+        const hab = habilidad.habili;
+        const score = habilidad.porcentaje;
+
+        const liMensaje = document.createElement('li');
+        liMensaje.innerHTML = `
+        
+        <p>${hab}.</p>
+        <div>
+            <a style="width:${score}%;">
+                <p>${score}%</p>
+            </a>
+        </div>
+        `;
+        listaHabilidades.appendChild(liMensaje);
+    });
+}
 
 function llenarIntereses(intereses) {
     intereses.forEach(interes => {
@@ -66,50 +85,27 @@ function llenarIdiomas(idiomas) {
     });
 }
 
-function llenarHabilidades(habilidades) {
-    habilidades.forEach(habilidad => {
-
-        const hab = habilidad.habili;
-        const score = habilidad.porcentaje;
-
-        const liMensaje = document.createElement('li');
-        liMensaje.innerHTML = `
-        
-        <p>${hab}.</p>
-        <div>
-            <a style="width:${score}%;">
-                <p>${score}%</p>
-            </a>
-        </div>
-        `;
-        listaHabilidades.appendChild(liMensaje);
-    });
-}
-
 function llenarEducacion(educacion, educacionC) {
 
     educacion.forEach(edu => {
 
-        const { institucion, duracion, titulo, ubicacion } = edu;
+        const { institucion, duracion, titulo } = edu;
 
         const div = document.createElement('div');
         const legend = document.createElement('legend');
         const h6first = document.createElement('h6');
         const h4 = document.createElement('h4');
-        const h6second = document.createElement('h6');
 
         legend.textContent = `${titulo}`;
         h6first.textContent = `${duracion}`;
         h4.textContent = `${institucion}`;
-        h6second.textContent = `${ubicacion}`;
 
         div.appendChild(legend);
-        div.appendChild(h6first);
         div.appendChild(h4);
+        div.appendChild(h6first);
         listaEducacion.appendChild(div);
 
     });
-
 
     // if (educacionC) {
     //     const h3 = document.createElement('h3');
@@ -146,9 +142,11 @@ function llenarExperiencia(experiencia) {
 
         const div = document.createElement('div');
         const legend = document.createElement('legend');
+        const divflex = document.createElement('div');
         const h4 = document.createElement('h4');
         const h6 = document.createElement('h6');
         const divP = document.createElement('div');
+        divflex.classList.add('d-flex');
 
         funcion.forEach(fun => {
             const parrafo = document.createElement('p');
@@ -162,8 +160,9 @@ function llenarExperiencia(experiencia) {
         h6.textContent = `${periodo}`;
 
         div.appendChild(legend);
-        div.appendChild(h4);
-        div.appendChild(h6);
+        divflex.appendChild(h4)
+        divflex.appendChild(h6)
+        div.appendChild(divflex);
         div.appendChild(divP);
 
 
@@ -172,6 +171,40 @@ function llenarExperiencia(experiencia) {
     });
 
 }
+
+function llenarlogos(linkedin, twitter, instagram) {
+
+    const nombreLinkedin = soloNombre(linkedin);
+
+    if (linkedin) {
+        document.getElementById('linkedin').innerHTML = `<i class="fa-brands fa-linkedin"> </i><a>${linkedin}</a>`;
+        document.getElementById('logos').innerHTML = `<div class="logo">
+            <i class="fa-brands fa-linkedin fa-lg"></i>
+            <h6 class="text-center" >${nombreLinkedin}</h6>
+        </div>`;
+    }
+
+    if (instagram) {
+        document.getElementById('logos').innerHTML = `<div class="logo">
+        <i class="fa-brands fa-instagram fa-lg"></i>
+        <h6>${instagram}</h6>
+    </div>`;
+    }
+
+    if (twitter) {
+        document.getElementById('logos').innerHTML = `<div class="logo">
+        <i class="fa-brands fa-twitter fa-lg"></i>
+        <h6>${twitter}</h6>
+    </div>`;
+    }
+
+    const logos = document.getElementById('logos').firstChild;
+    if (!logos) {
+        document.getElementById('logos').style.height = '0mm';
+    }
+
+}
+
 function soloNombre(nombre) {
     nombre = nombre.replace('/in/', '')
     nombre = nombre.replace('/', '')
@@ -184,19 +217,4 @@ function soloNombre(nombre) {
     nombre = nombre.replace('https:', '')
     nombre = nombre.replace('.com', '')
     return (nombre);
-}
-
-function llenarTI(linkedin, twitter, instagram) {
-
-    const nombreLinkedin = soloNombre(linkedin);
-
-    if (linkedin) {
-        document.getElementById('linkedin').innerHTML = `<i class="fa-brands fa-linkedin"></i><a>${nombreLinkedin}</a>`;
-    }
-    if (twitter) {
-        document.getElementById('twitter').innerHTML = `<i class="fa-brands fa-twitter"></i><a>${twitter}</a>`;
-    }
-    if (instagram) {
-        document.getElementById('instagram').innerHTML = `<i class="fa-brands fa-instagram"></i><a>${instagram}</a>`;
-    }
 }
