@@ -60,9 +60,9 @@ let funciones = [];
 
 document.addEventListener('DOMContentLoaded', () => {
 
-     urlActual = window.location.pathname;
+    let urlActual = window.location.pathname;
     console.log(urlActual);
-    if (urlActual === '/index.html') {
+    if (urlActual === 'https://hv-2022-resume.netlify.app') {
         //Intereses
         formularioIntereses.addEventListener('click', nuevoIntereses);
         listaintereses.addEventListener('click', eliminarCampo);
