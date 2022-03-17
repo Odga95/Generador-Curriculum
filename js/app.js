@@ -61,6 +61,7 @@ let funciones = [];
 document.addEventListener('DOMContentLoaded', () => {
 
     let urlActual = window.location.pathname;
+    console.log(urlActual);
     if (urlActual === '/index.html') {
         //Intereses
         formularioIntereses.addEventListener('click', nuevoIntereses);
