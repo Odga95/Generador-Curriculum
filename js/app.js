@@ -770,13 +770,13 @@ function cargarDatosCV(e) {
     let twitter = document.getElementById('twitter').value;
     let instagram = document.getElementById('instagram').value;
 
-    // if (nombre === '' || email === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion === '') {
-    //     Swal.fire(
-    //         'Ohh no!',
-    //         'Faltan campos por llenar!'
-    //     );
-    //     return;
-    // }
+    if (nombre === '' || email === '' || edad === '' || telefono === '' || pais === '' || ciudad === '' || barrio === '' || direccion === '' || perfil === '' || aspiracion === '') {
+        Swal.fire(
+            'Ohh no!',
+            'Faltan campos por llenar!'
+        );
+        return;
+    }
 
     const datosPersonalesObj = {
         nombre, email, edad, telefono, linkedin, pais, ciudad, barrio, direccion, perfil, aspiracion, twitter, instagram
