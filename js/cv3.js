@@ -4,34 +4,51 @@ const listaIdiomas = document.querySelector('#idiomas');
 const listaHabilidades = document.querySelector('#habilidades');
 const listaEducacion = document.querySelector('#estudios');
 const listaExperiencia = document.querySelector('#experiencia');
+const descargar = document.querySelector('#DescargarPDF');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const Gperfil = JSON.parse(localStorage.getItem('perfil'));
-    const Gformacion = JSON.parse(localStorage.getItem('formacion'));
-    const Gexperiencia = JSON.parse(localStorage.getItem('experiencia'));
-    const Gintereses = JSON.parse(localStorage.getItem('intereses'));
-    const GformacionC = JSON.parse(localStorage.getItem('formacionC'));
-    const Gidiomas = JSON.parse(localStorage.getItem('idiomas'));
-    const Ghabilidades = JSON.parse(localStorage.getItem('habilidades'));
+    // const Gperfil = JSON.parse(localStorage.getItem('perfil'));
+    // const Gformacion = JSON.parse(localStorage.getItem('formacion'));
+    // const Gexperiencia = JSON.parse(localStorage.getItem('experiencia'));
+    // const Gintereses = JSON.parse(localStorage.getItem('intereses'));
+    // const GformacionC = JSON.parse(localStorage.getItem('formacionC'));
+    // const Gidiomas = JSON.parse(localStorage.getItem('idiomas'));
+    // const Ghabilidades = JSON.parse(localStorage.getItem('habilidades'));
 
-    const { nombre, email, telefono, linkedin, direccion, perfil, aspiracion, twitter, instagram } = Gperfil
+    // const { nombre, email, telefono, linkedin, direccion, perfil, aspiracion, twitter, instagram } = Gperfil
 
     //Objeto Perfil
-    document.getElementById('nombre').textContent = nombre;
-    document.getElementById('cargobuscado').textContent = aspiracion;
-    document.getElementById('presentacion').textContent = perfil;
-    document.getElementById('telephone').textContent = telefono;
+    // document.getElementById('nombre').textContent = nombre;
+    // document.getElementById('cargobuscado').textContent = aspiracion;
+    // document.getElementById('presentacion').textContent = perfil;
+    // document.getElementById('telephone').textContent = telefono;
 
-    document.getElementById('direccion').textContent = direccion;
-    document.getElementById('email').textContent = email;
+    // document.getElementById('direccion').textContent = direccion;
+    // document.getElementById('email').textContent = email;
 
-    llenarEducacion(Gformacion, GformacionC);
-    llenarExperiencia(Gexperiencia);
+    // llenarEducacion(Gformacion, GformacionC);
+    // llenarExperiencia(Gexperiencia);
     // llenarHabilidades(Ghabilidades);
     // llenarIdiomas(Gidiomas);
     // llenarIntereses(Gintereses);
     // llenarlogos(linkedin, twitter, instagram);
+
+
+    document.getElementById('CargarFoto').onchange = function (e) {
+        console.log('cargando foto');
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0]);
+        reader.onload = function () {
+            let preview = document.getElementById('preview');
+            imagen = document.createElement('img');
+            imagen.src = reader.result;
+            imagen.classList.add('preview');
+            preview.innerHTML = "";
+            preview.append(imagen);
+        }
+    }
+        descargar.addEventListener('click', aPDF);
 
 });
 
@@ -324,3 +341,8 @@ function llenarExperiencia(experiencia) {
 //     nombre = nombre.replace('.com', '')
 //     return (nombre);
 // }
+
+function aPDF () {
+    let convertir = document.getElementById('html2pdf');
+    html2pdf(convertir, {html2canvas:  { scale: 5 }});
+}

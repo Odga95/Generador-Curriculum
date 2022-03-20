@@ -12,20 +12,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c561dfd312.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"
+        integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
-    <main class="margen">
+    <div>
+        <label for="CargarFoto" class="upload">Cargar Foto</label>
+        <input id="CargarFoto" type="file" accept=".jpg, .png, .jpeg"></input>
+        <label for="DescargarPDF" class="download" id="DescargarPDF">Descargar...</label>
+    </div>
+    <main class="margen" id="html2pdf">
         <section class="contenedor">
             <div class="first">
-                <div class="img">
-                    <img src="img/CV2.jpg" alt="">
+                <div class="img" id="preview">
                 </div>
                 <div class="nombre">
                     <legend id="nombre"></legend>
                 </div>
                 <div class="puesto">
-                    <h4 id="cargobuscado" ></h4>
+                    <h4 id="cargobuscado"></h4>
                 </div>
                 <div class="perfil">
                     <h4>Perfil</h4>

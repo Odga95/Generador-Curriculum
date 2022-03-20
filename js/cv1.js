@@ -1,4 +1,4 @@
-//SELECTORES f
+//SELECTORES
 const listaIntereses = document.querySelector('#intereses');
 const listaIdiomas = document.querySelector('#idiomas');
 const listaHabilidades = document.querySelector('#habilidades');
@@ -8,32 +8,33 @@ const descargar = document.querySelector('#DescargarPDF');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const Gperfil = JSON.parse(localStorage.getItem('perfil'));
-    const Gformacion = JSON.parse(localStorage.getItem('formacion'));
-    const Gexperiencia = JSON.parse(localStorage.getItem('experiencia'));
-    const Gintereses = JSON.parse(localStorage.getItem('intereses'));
-    const GformacionC = JSON.parse(localStorage.getItem('formacionC'));
-    const Gidiomas = JSON.parse(localStorage.getItem('idiomas'));
-    const Ghabilidades = JSON.parse(localStorage.getItem('habilidades'));
+    // const Gperfil = JSON.parse(localStorage.getItem('perfil'));
+    // const Gformacion = JSON.parse(localStorage.getItem('formacion'));
+    // const Gexperiencia = JSON.parse(localStorage.getItem('experiencia'));
+    // const Gintereses = JSON.parse(localStorage.getItem('intereses'));
+    // const GformacionC = JSON.parse(localStorage.getItem('formacionC'));
+    // const Gidiomas = JSON.parse(localStorage.getItem('idiomas'));
+    // const Ghabilidades = JSON.parse(localStorage.getItem('habilidades'));
 
-    const { nombre, email, telefono, linkedin, direccion, perfil, aspiracion, twitter, instagram } = Gperfil
+    // const { nombre, email, telefono, linkedin, direccion, perfil, aspiracion, twitter, instagram } = Gperfil
 
-    //Objeto Perfil
-    document.getElementById('nombre').textContent = nombre;
-    document.getElementById('email').textContent = email;
-    document.getElementById('telephone').textContent = telefono;
-    document.getElementById('direccion').textContent = direccion;
-    document.getElementById('presentacion').innerHTML = `<p>${perfil}</p>`;
-    document.getElementById('cargobuscado').textContent = aspiracion;
+    // //Objeto Perfil
+    // document.getElementById('nombre').textContent = nombre;
+    // document.getElementById('email').textContent = email;
+    // document.getElementById('telephone').textContent = telefono;
+    // document.getElementById('direccion').textContent = direccion;
+    // document.getElementById('presentacion').innerHTML = `<p>${perfil}</p>`;
+    // document.getElementById('cargobuscado').textContent = aspiracion;
 
-    llenarHabilidades(Ghabilidades);
-    llenarIdiomas(Gidiomas);
-    llenarEducacion(Gformacion, GformacionC);
-    llenarIntereses(Gintereses);
-    llenarExperiencia(Gexperiencia);
-    llenarTI(linkedin, twitter, instagram);
+    // llenarHabilidades(Ghabilidades);
+    // llenarIdiomas(Gidiomas);
+    // llenarEducacion(Gformacion, GformacionC);
+    // llenarIntereses(Gintereses);
+    // llenarExperiencia(Gexperiencia);
+    // llenarTI(linkedin, twitter, instagram);
 
     document.getElementById('CargarFoto').onchange = function (e) {
+        console.log('cargando foto');
         let reader = new FileReader();
         reader.readAsDataURL(e.target.files[0]);
         reader.onload = function () {
